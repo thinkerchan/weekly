@@ -50,6 +50,9 @@
 
 3. 回到 https://github.com/你的仓库/settings/actions, 找到 `Workflow permissions`, 选中 `读和写权限` 保存即可
 
+### 其他
+考虑到也有人可能会同步到自己的微信公众号, 可以使用这个md转公众号文章工具 https://thinkerchan.com/md/dist/
+
 ---
 感谢
 - [tw93](https://github.com/tw93/weekly)
