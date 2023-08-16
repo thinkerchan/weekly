@@ -37,7 +37,7 @@
   "twitterId": "thinkerchan",
   "githubId": "thinkerchan",
   "repo": "thinkerchan/weekly",
-  "cmtURL":"https://cmt.testdog.cn"
+  "cmtURL":"https://cmt.testdog.cn" // 不配置则不显示评论
 }
 ```
 ### github actions
