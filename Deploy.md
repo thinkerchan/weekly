@@ -40,7 +40,17 @@
   "cmtURL":"https://cmt.testdog.cn"
 }
 ```
+### github actions
+> 本仓库使用github actions主要是为了自动更新readme.md，这个不是必要的。不了解Github actions可查看[文档](https://docs.github.com/zh/actions/quickstart)
+
+直接按下操作即可:
+1. 先在 https://github.com/settings/tokens/new 创建一个秘钥, 在`Select scopes`中把 `repo`和`workflow`勾上, 保存. 然后复制生成的那个明文秘钥，格式类似: ghp_xxxxxxxxxxx , 注意不要泄露。
+
+2. 回到 https://github.com/你的仓库/settings/secrets/actions 中, 点击`new repository secret` 创建一个名为`GH_TOKEN`的变量, 值为步骤1中的秘钥
+
+3. 回到 https://github.com/你的仓库/settings/actions, 找到 `Workflow permissions`, 选中 `读和写权限` 保存即可
 
 ---
 感谢
 - [tw93](https://github.com/tw93/weekly)
+- 我
