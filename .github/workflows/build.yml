@@ -39,5 +39,5 @@ jobs:
         git config --global user.name "testdog-bot"
         git pull
         git add -A
-        git commit -m "Updated content" || exit 0
+        git commit -m "Updated content from bot" || exit 0
         git push
