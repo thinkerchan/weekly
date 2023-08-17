@@ -1,3 +1,6 @@
+---
+import { SITE } from '@/config';
+---
 <script type="text/javascript" src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"></script>
 
 <!-- This is intentionally inlined to avoid FOUC 2-->
@@ -96,4 +99,4 @@
   document.getElementById('Jcomment') && CONFIG.cmtURL && mod.load('lib-cmt',mod.cmtSdk);
 </script>
 
-<script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+{SITE.pv ?<script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>:''}

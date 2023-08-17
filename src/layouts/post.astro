@@ -252,12 +252,15 @@ if (postIndex < allPosts.length) {
         </div>
 
         <div id="Jcomment"></div>
-        <div class="flex align-middle justify-center mt-4">
-            <span id="busuanzi_container_site_pv">
-              @{SITE.author} PV
-              <span id="busuanzi_value_site_pv"></span>
-            </span>
-        </div>
+        { SITE.pv?
+          <div class="flex align-middle justify-center mt-4">
+              <span id="busuanzi_container_site_pv">
+                @{SITE.author} PV
+                <span id="busuanzi_value_site_pv"></span>
+              </span>
+          </div>
+          :''
+        }
 
       </div>
       <div id="grid-right" class="grid-sidebar">

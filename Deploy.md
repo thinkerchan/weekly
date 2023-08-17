@@ -24,6 +24,7 @@
 ### 新增
 - 评论使用[Waline](https://waline.js.org/),按教程配置即可
 - TOC
+- busuanzi pv统计
 
 ### 项目配置
 config.json配置如下填写即可
@@ -40,7 +41,8 @@ config.json配置如下填写即可
   "twitterId": "thinkerchan",
   "githubId": "thinkerchan",
   "repo": "thinkerchan/weekly",
-  "cmtURL":"https://cmt.testdog.cn" // 不配置则不显示评论
+  "cmtURL":"https://cmt.testdog.cn", // 不配置则不显示评论
+  "pv": true
 }
 ```
 

@@ -10,5 +10,6 @@
   "twitterId": "thinkerchan",
   "githubId": "thinkerchan",
   "repo": "thinkerchan/weekly",
-  "cmtURL":"https://cmt.testdog.cn"
+  "cmtURL":"https://cmt.testdog.cn",
+  "pv":true
 }
