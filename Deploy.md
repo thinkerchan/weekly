@@ -20,10 +20,13 @@
 2. 首先确保 Fork 的代码已经传到 Github 中了, 然后进入 [Vercel](https://vercel.com/new) 选择 `Continue with GitHub`，将对应的仓库 import 进去
 3. 导入后，确定 FRAMEWORK PRESET 是 Astro（[截图](https://gw.alipayobjects.com/zos/k/ic/0BffKE.png)），一般会默认选中，没有的话请选择这个，选择后，点击 Deploy 即可，稍等片刻，等待部署
 4. 过了一会儿部署完成了，参考[截图](https://gw.alipayobjects.com/zos/k/e3/QLS7dG.png)位置，就是你的域名地址好了，点击进去就可以访问了，是不是很简单
-5. 评论使用[Waline](https://waline.js.org/),按教程配置即可
+
+### 新增
+- 评论使用[Waline](https://waline.js.org/),按教程配置即可
+- TOC
 
 ### 项目配置
-项目配置如下填写即可
+config.json配置如下填写即可
 ```json
 {
   "title": "测试狗",
@@ -40,6 +43,16 @@
   "cmtURL":"https://cmt.testdog.cn" // 不配置则不显示评论
 }
 ```
+
+文档设置toc
+```
+---
+toc: true
+---
+
+xxxxxxxx
+```
+
 ### github actions
 > 本仓库使用github actions主要是为了自动更新readme.md，这个不是必要的。不了解Github actions可查看[文档](https://docs.github.com/zh/actions/quickstart)
 

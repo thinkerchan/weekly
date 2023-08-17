@@ -8,6 +8,9 @@ import LeftSidebar from '../components/LeftSidebar.astro';
 import { SITE } from '@/config';
 import { parseTitle, sortPosts, getIndex } from '@/util';
 
+const { headings } = Astro.props;
+import Toc from '../components/Toc/Toc.astro';
+
 export interface Props {
   frontmatter: { date: any; pic: any; desc: any; url: any; twitterImg: any };
   title: string;
@@ -18,7 +21,7 @@ const currentPage = pageUrl.pathname;
 
 let title = parseTitle(currentPage);
 
-const { date, pic, desc, url, twitterImg } = Astro.props.frontmatter;
+const { date, pic, desc, url, twitterImg,toc } = Astro.props.frontmatter;
 const content = {
   title,
   image: pic,
@@ -222,7 +225,7 @@ if (postIndex < allPosts.length) {
             <div class="md:mt-0 mt-4 flex-1 text-right">
               {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
               {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
-              <a href="/">去首页 |</a>
+              <!-- <a href="/">去首页 |</a>
               <a
                 href={`https://twitter.com/${SITE.twitterId}`}
                 target="_blank"
@@ -243,7 +246,7 @@ if (postIndex < allPosts.length) {
                 class="xl:inline-block hidden"
               >
                 | RSS</a
-              >
+              > -->
             </div>
           </div>
         </div>
@@ -257,9 +260,9 @@ if (postIndex < allPosts.length) {
         </div>
 
       </div>
-      <div id="grid-right">
+      <div id="grid-right" class="grid-sidebar" title="Site Navigation">
         <div id="table-of-contents">
-          <slot  name="toc"/>
+          { toc?<Toc headings={headings} />:''}
         </div>
       </div>
     </main>

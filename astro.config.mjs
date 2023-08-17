@@ -5,20 +5,9 @@ import fs from 'fs';
 import { defineConfig } from 'astro/config';
 import { parse } from 'node-html-parser';
 import { SITE } from './src/config';
-import remarkToc from 'remark-toc';
-
-const tocRegex = /^##\s+(?:Table\s+of\s+Contents|TOC)$/im;
-
 
 function defaultLayoutPlugin() {
   return function (tree, file) {
-
-    // const hasToc = tocRegex.test(file);
-    // if (hasToc) {
-    //   let str = file.value.match(tocRegex)[0];
-    //   file.value = file.value.replace(str, `<div class="g-toc">${str}</div>`);
-    // }
-
     const filePath = file.history[0];
     file.data.astro.frontmatter.layout = '@layouts/post.astro';
 
@@ -60,7 +49,9 @@ function defaultLayoutPlugin() {
 export default defineConfig({
   integrations: [react(), tailwind()],
   markdown: {
-    remarkPlugins: [defaultLayoutPlugin,remarkToc],
+    remarkPlugins: [
+      defaultLayoutPlugin,
+    ],
     extendDefaultPlugins: true,
   },
 });
