@@ -2,7 +2,8 @@
 
 <!-- This is intentionally inlined to avoid FOUC 2-->
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', function () {
+  const doc = document
+  doc.addEventListener('DOMContentLoaded', function () {
 
     // 图片懒加载
     const observer = lozad('.lozad', {
@@ -13,11 +14,33 @@
     observer.observe();
 
     // 链接外跳
-    const links = document.links;
+    const links = doc.links;
     for (let i = 0; i < +links.length; i++) {
       if (links[i].hostname != window.location.hostname ) {
         links[i].target = '_blank';
       }
+    }
+
+    // toc高亮
+    if (doc.getElementById('Jtoc')) {
+      const sections = Array.from(doc.querySelectorAll("h2[id]"));
+      const scrollHandler = entries =>
+        entries.forEach(entry => {
+          const section = entry.target;
+          const sectionId = section.id;
+          const sectionLink = doc.querySelector(`.toc-list>li>a[href="#${sectionId}"]`);
+
+          let inScreen = entry.intersectionRatio > 0
+          //  也可以按照entry.boundingClientRect判断
+          if (inScreen) {
+            sectionLink.classList.add("on");
+          } else {
+            sectionLink.classList.remove("on");
+          }
+        });
+
+      const itsObserver = new IntersectionObserver(scrollHandler);
+      sections.forEach(section => itsObserver.observe(section));
     }
   });
 </script>

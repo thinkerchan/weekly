@@ -19,8 +19,9 @@ function buildToc(headings) {
 }
 ---
 
-<nav class="toc">
-  <ul>
+<nav class="g-toc" id="Jtoc">
+  <h5>大纲</h5>
+  <ul class="toc-list">
     {toc.map((heading) => <TocItem heading={heading} />)}
   </ul>
 </nav>

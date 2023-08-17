@@ -1,6 +1,6 @@
 ---
 date: 2023/01/01
-toc: true
+toc:
 ---
 
 <img src="https://gw.alipayobjects.com/zos/k/bi/139.jpg" width="800" slot="toc" />
@@ -12,10 +12,6 @@ toc: true
 - [45种折纸飞机的方式](https://www.foldnfly.com/#/1-1-1-1-1-1-1-1-2)
 - [教你如何打结](https://www.animatedknots.com/complete-knot-list)
 - [今日热榜](https://tophub.today/)
-
-### ddd
-### ddd
-### ddd
 
 ## 资源
 - [北大网课](https://lib-pku.github.io/)

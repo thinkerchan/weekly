@@ -379,3 +379,24 @@ h2.heading {
   -webkit-box-orient:vertical;
   padding-right: .2rem;
 }
+
+.g-toc{
+  padding-top: 4rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.g-toc li{
+  font-size: .96em;
+  padding-bottom: .2rem;
+}
+.g-toc .toc-sub-list{
+  padding-top: .2rem;
+}
+.g-toc .toc-sub-list > li{
+  text-indent: 1em;
+}
+
+.g-toc li .on{
+  font-weight: bold;
+}
