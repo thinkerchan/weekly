@@ -400,3 +400,8 @@ h2.heading {
 .g-toc li .on{
   font-weight: bold;
 }
+
+.g-toc li a{
+  color: var(--theme-text-light);
+  text-decoration: none;
+}
