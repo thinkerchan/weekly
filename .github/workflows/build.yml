@@ -55,8 +55,23 @@ jobs:
           git commit -m "Updated content from bot" || exit 0
           git push
 
+      - name: Check if Vercel CLI installed
+        id: vercel_installed
+        run: |
+          if command -v vercel &> /dev/null; then
+            echo "Vercel CLI already installed"
+            echo "::set-output name=installed::true"
+          else
+            echo "Vercel CLI not installed"
+            echo "::set-output name=installed::false"
+          fi
+        shell: bash
+
       - name: Install Vercel CLI
-        run: npm install --global vercel@latest
+        run: |
+          if [[ "${{ steps.vercel_installed.outputs.installed }}" != "true" ]]; then
+            npm install --global vercel@latest
+          fi
 
       - name: Pull Vercel Environment Information
         if: steps.readme_changed.outcome == 'success' # 只在 README.md 有更新时触发
