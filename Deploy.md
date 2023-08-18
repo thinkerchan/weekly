@@ -25,7 +25,7 @@
 1. 评论使用[Waline](https://waline.js.org/),按教程配置即可
 2. TOC
 3. busuanzi pv统计
-4. 只有README.md有变动时, github actions触发 `vercel --prod`
+4. 只有README.md有变动(新建文章的场景)时, github actions触发 `vercel --prod`
 
 > 注意第4点, 能看到这里,说明你很大概率已经在vercel创建好了对应的项目。考虑到通常开发者都会直接用vercel-cli直接本地发布，并且vercel给的用量也够。 因此第四点并不是一个很有价值的功能
 
