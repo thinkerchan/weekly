@@ -43,7 +43,13 @@ jobs:
       - name: Check if README.md changed
         id: readme_changed
         run: |
-          git diff --quiet HEAD README.md || echo "README changed"
+          if git diff --quiet HEAD README.md; then
+            echo "No changes in README.md"
+            echo "::set-output name=isChange::false"
+          else
+            echo "README.md changed"
+            echo "::set-output name=isChange::true"
+          fi
 
       - name: Commit and push if changed
         run: |
@@ -73,10 +79,8 @@ jobs:
             npm install --global vercel@latest
           fi
 
-      - name: Pull Vercel Environment Information
-        if: steps.readme_changed.outcome == 'success' # 只在 README.md 有更新时触发
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
       - name: Deploy to Vercel
-        if: steps.readme_changed.outcome == 'success' # 只在 README.md 有更新时触发
-        run: vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: |
+          if [[ "${{ steps.readme_changed.outputs.isChange }}" == "true" ]]; then
+            vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
+          fi
