@@ -83,5 +83,6 @@ jobs:
       - name: Deploy to Vercel
         run: |
           if [[ "${{ steps.readme_changed.outputs.isChange }}" == "true" ]]; then
+            vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
             vercel --prod --token=${{ secrets.VERCEL_TOKEN }}
           fi
