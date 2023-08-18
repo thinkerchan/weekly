@@ -21,10 +21,13 @@
 3. 导入后，确定 FRAMEWORK PRESET 是 Astro（[截图](https://gw.alipayobjects.com/zos/k/ic/0BffKE.png)），一般会默认选中，没有的话请选择这个，选择后，点击 Deploy 即可，稍等片刻，等待部署
 4. 过了一会儿部署完成了，参考[截图](https://gw.alipayobjects.com/zos/k/e3/QLS7dG.png)位置，就是你的域名地址好了，点击进去就可以访问了，是不是很简单
 
-### 新增
-- 评论使用[Waline](https://waline.js.org/),按教程配置即可
-- TOC
-- busuanzi pv统计
+### 新增功能
+1. 评论使用[Waline](https://waline.js.org/),按教程配置即可
+2. TOC
+3. busuanzi pv统计
+4. 只有README.md有变动时, github actions触发 `vercel --prod`
+
+> 注意第4点, 能看到这里,说明你很大概率已经在vercel创建好了对应的项目。考虑到通常开发者都会直接用vercel-cli直接本地发布，并且vercel给的用量也够。 因此第四点并不是一个很有价值的功能
 
 ### 项目配置
 config.json配置如下填写即可
@@ -65,10 +68,12 @@ xxxxxxxx
 
 3. 回到 https://github.com/你的仓库/settings/actions, 找到 `Workflow permissions`, 选中 `读和写权限` 保存即可
 
+4. 同理, 先获取[Vercel token](https://vercel.com/account/tokens), 按照步骤2创建一个名为`VERCEL_TOKEN`的变量
+
 ### 其他
 考虑到也有人可能会同步到自己的微信公众号, 可以使用这个md转公众号文章工具 https://thinkerchan.com/md/dist/
 
 ---
 感谢
 - [tw93](https://github.com/tw93/weekly)
-- 我
+- [我](https://github.com/thinkerchan/weekly)

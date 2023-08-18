@@ -5,7 +5,7 @@ toc:
 
 <img src="https://gw.alipayobjects.com/zos/k/bi/139.jpg" width="800" slot="toc" />
 
-<small>简介写这里... </small>
+<small>hello world</small>
 
 ## 有意思
 - [书格，极有趣的中文古籍或绘画小站](https://new.shuge.org/)

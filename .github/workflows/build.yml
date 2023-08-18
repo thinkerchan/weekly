@@ -61,6 +61,7 @@ jobs:
           git commit -m "Updated content from bot" || exit 0
           git push
 
+      # 不需要vercel 可以把以下内容注释或删除
       - name: Check if Vercel CLI installed
         id: vercel_installed
         run: |
