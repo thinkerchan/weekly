@@ -34,13 +34,24 @@ const currentUrl = SITE.homePage + currentPage;
 const posts = await Astro.glob('../pages/posts/*.md');
 const allPosts = sortPosts(posts);
 const postIndex = getIndex(currentPage);
-let nextUrl = '';
-if (postIndex > 2) {
-  nextUrl = allPosts[allPosts.length - postIndex + 1].url;
-}
+
 let prevUrl = '';
-if (postIndex < allPosts.length) {
-  prevUrl = allPosts[allPosts.length - postIndex - 1].url;
+let nextUrl = '';
+
+if (allPosts.length) {
+  // 查看较旧的一篇
+  if (postIndex < allPosts.length && postIndex > 0) {
+    prevUrl = allPosts[ allPosts.length - postIndex].url;
+  }else{
+    prevUrl = ''
+  }
+
+  // 查看较新的一篇
+  if (postIndex < allPosts.length - 1) {
+    nextUrl = allPosts[ allPosts.length - postIndex - 2].url;
+  }else{
+    nextUrl = ''
+  }
 }
 ---
 
@@ -223,9 +234,9 @@ if (postIndex < allPosts.length) {
               }
             </div>
             <div class="md:mt-0 mt-4 flex-1 text-right">
-              {nextUrl ? <a href={nextUrl}>下一篇 |</a> : null}
-              {prevUrl ? <a href={prevUrl}>上一篇 |</a> : null}
-              <!-- <a href="/">去首页 |</a>
+              {nextUrl ? <a href={nextUrl}>上一篇 |</a> : null}
+              {prevUrl ? <a href={prevUrl}>下一篇 |</a> : null}
+              <a href="/">去首页 |</a>
               <a
                 href={`https://twitter.com/${SITE.twitterId}`}
                 target="_blank"
@@ -246,7 +257,7 @@ if (postIndex < allPosts.length) {
                 class="xl:inline-block hidden"
               >
                 | RSS</a
-              > -->
+              >
             </div>
           </div>
         </div>
