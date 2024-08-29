@@ -5,6 +5,7 @@ import HeadSEO from '../components/HeadSEO.astro';
 import Footer from '../components/Footer.astro';
 import AstroLogo from '../components/Header/AstroLogo.astro';
 import LeftSidebar from '../components/LeftSidebar.astro';
+import Search from '../components/Header/Search.astro';
 import { SITE } from '@/config';
 import { parseTitle, sortPosts, getIndex } from '@/util';
 
@@ -207,6 +208,7 @@ if (allPosts.length) {
               ><AstroLogo size={40} />
             </a>
             {title}
+            <Search />
           </h1>
           <div id="Jslot">
             <slot/>
@@ -224,40 +226,17 @@ if (allPosts.length) {
             class="flex justify-between md:flex-row flex-col mt-2 post-footer"
           >
             <div class="text-gray-800 flex-1">
-              发布日期：
-              {
-                SITE.repo?
-                <a href={`https://github.com/${SITE.repo}/tree/master/src/pages${url}.md`}
-                target="_blank"
-                title="Edit">{date}</a>
-                : date
+              发布日期: {SITE.repo?
+              <a href={`https://github.com/${SITE.repo}/tree/master/src/pages${url}.md`} target="_blank" title="Edit">{date}</a> : date
               }
             </div>
             <div class="md:mt-0 mt-4 flex-1 text-right">
               {nextUrl ? <a href={nextUrl}>上一篇 |</a> : null}
               {prevUrl ? <a href={prevUrl}>下一篇 |</a> : null}
-              <a href="/">去首页 |</a>
-              <a
-                href={`https://twitter.com/${SITE.twitterId}`}
-                target="_blank"
-                title="Follow">Twitter</a
-              >
-              <a
-                href={`https://github.com/${SITE.repo}`}
-                title="Star"
-                target="_blank"
-                class="lg:inline-block hidden"
-              >
-                | Github</a
-              >
-              <a
-                href="/rss.xml"
-                title="Subscribe"
-                target="_blank"
-                class="xl:inline-block hidden"
-              >
-                | RSS</a
-              >
+              <a href="/">去首页 </a>
+              {SITE.twitterId && ( <a href={`https://twitter.com/${SITE.twitterId}`} target="_blank" title="Follow">| Twitter</a>)}
+              {SITE.repo && (<a href={`https://github.com/${SITE.repo}`} title="Star" target="_blank" class="lg:inline-block hidden">| Github</a>)}
+              <a href="/rss.xml" title="Subscribe" target="_blank" class="xl:inline-block hidden">| RSS</a>
             </div>
           </div>
         </div>

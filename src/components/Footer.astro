@@ -4,7 +4,7 @@ import { SITE } from '@/config';
 <script type="text/javascript" src="https://gw.alipayobjects.com/os/k/3j/lozad.min.js"></script>
 
 <!-- This is intentionally inlined to avoid FOUC 2-->
-<script is:inline>
+<script is:inline define:vars={{ SITE }}>
   const doc = document
   doc.addEventListener('DOMContentLoaded', function () {
 
@@ -48,7 +48,7 @@ import { SITE } from '@/config';
   });
 </script>
 
-<script >
+<script>
   import CONFIG from '../../config.json'
   const mod = {
     timePrefix:'t-',
@@ -56,7 +56,7 @@ import { SITE } from '@/config';
     load:function(libName,libUrl){
       let aval = (new Date).getTime() - localStorage.getItem(this.timePrefix+libName) < this.expire;
       let libStr = localStorage.getItem(libName)
-      if (aval && libStr) {
+      if (aval && libStr ) {
         this.parseAndInsert(libStr)
         this.genCmt()
       }else{
@@ -88,12 +88,13 @@ import { SITE } from '@/config';
         window.Waline && Waline.init({
           el: '#Jcomment',
           serverURL: CONFIG.cmtURL,
+          copyright:false,
         });
         clearTimeout(t)
         t = null;
       }, 100);
     },
-    cmtSdk:'https://unpkg.com/@waline/client@2.15.5/dist/waline.js',
+    cmtSdk: CONFIG.cmtJs,
   }
 
   document.getElementById('Jcomment') && CONFIG.cmtURL && mod.load('lib-cmt',mod.cmtSdk);
