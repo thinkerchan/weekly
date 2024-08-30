@@ -17,8 +17,9 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "pagefind --site dist  &&  astro preview",
-    "astro": "astro"
+    "preview": "astro preview",
+    "astro": "astro",
+    "postbuild": "pagefind --site dist"
   },
   "dependencies": {
     "@algolia/client-search": "^4.14.2",
