@@ -97,7 +97,7 @@ import SearchIcon from './SearchIcon.astro';
               bundlePath: import.meta.env.BASE_URL.replace(/\/$/, '') + '/pagefind/',
               showImages: false,
               translations: {
-                placeholder: '搜索潮流内容',
+                placeholder: '站内搜索',
                 zero_results: '没有找到 [SEARCH_TERM]',
                 many_results: '[COUNT] 条搜索命中 [SEARCH_TERM]',
                 clear_search: '清除',
@@ -117,7 +117,7 @@ import SearchIcon from './SearchIcon.astro';
   body {
     --pagefind-ui-primary: #a67c52;
     --pagefind-ui-border-width: 1px;
-    --pagefind-ui-font: 'LXGW WenKai Screen R', sans-serif;
+    /* --pagefind-ui-font: 'LXGW WenKai Screen R', sans-serif; */
   }
 
   .site-search {

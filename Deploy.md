@@ -26,6 +26,7 @@
 2. TOC
 3. busuanzi pv统计
 4. 只有README.md有变动(新建文章的场景)时, github actions触发 `vercel --prod`
+5. 新增站内搜索(从[tw93](https://github.com/tw93/weekly)那边复制过来的😏)
 
 > 注意第4点, 能看到这里,说明你很大概率已经在vercel创建好了对应的项目。考虑到通常开发者都会直接用vercel-cli直接本地发布，并且vercel给的用量也够。 因此第四点并不是一个很有价值的功能
 
@@ -34,18 +35,20 @@ config.json配置如下填写即可
 ```json
 {
   "title": "测试狗",
-  "author": "thinkerchan",
+  "author": "testdog",
   "description": "测试狗周刊",
   "keywords": "测试狗,testdog,testdog.cn",
   "icon": "https://t-qiniu.linkroutes.com/uPic/XgSVmb.jpg",
   "pic": "",
   "homePage": "https://post.testdog.cn",
   "blogPage": "",
-  "twitterId": "thinkerchan",
+  "twitterId": "",
   "githubId": "thinkerchan",
   "repo": "thinkerchan/weekly",
-  "cmtURL":"https://cmt.testdog.cn", // 不配置则不显示评论
-  "pv": true
+  "cmtURL":"https://cmt.testdog.cn", // 无则隐藏
+  "cmtJs":"https://unpkg.com/@waline/client@2.15.8/dist/waline.js",
+  "cmtCss":"https://unpkg.com/@waline/client@2.15.8/dist/waline.css",
+  "pv":true
 }
 ```
 
