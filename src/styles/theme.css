@@ -46,6 +46,7 @@
   --theme-divider: hsla(var(--color-gray-95), 1);
   --theme-text: hsla(var(--color-gray-10), 1);
   --theme-text-light: #333;
+  --theme-text-light-gray: #666;
   /* @@@: not used anywhere */
   --theme-text-lighter: hsla(var(--color-gray-80), 1);
   --theme-bg: hsla(var(--color-base-white), 100%, 1);
@@ -66,7 +67,9 @@
   color-scheme: dark;
   --theme-accent: #e8a15a;
   --theme-text: #e7e9ea;
+
   --theme-text-light: var(--theme-text);
+  --theme-text-light-gray: #ccc;
   --theme-divider: #555;
   --theme-bg: #21262b;
   --placeholder-gradient-start: #2c3e50;

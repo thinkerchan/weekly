@@ -257,9 +257,10 @@ blockquote {
   margin: 2rem 0;
   padding: 1.25em 1.5rem;
   border-left: 3px solid var(--theme-text-light);
-  background-color: var(--theme-bg-offset);
+  /* background-color: var(--theme-bg-offset); */
   border-radius: 0 0.25rem 0.25rem 0;
   line-height: 1.7;
+  font-style: italic;
 }
 
 img {
@@ -413,4 +414,8 @@ h2.heading {
   margin-bottom: 1rem;
   font-weight: 700;
   line-height: 1;
+}
+
+.card-desc{
+  color: var(--theme-text-light-gray);
 }
