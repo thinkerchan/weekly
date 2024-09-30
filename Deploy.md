@@ -1,5 +1,49 @@
 # 开发教程
 
+> 此项目是基于原作者的 [tw93](https://github.com/tw93/weekly) 项目修改的
+### 新增功能
+1. 评论使用[Waline](https://waline.js.org/),按教程配置即可
+2. 文章TOC
+3. busuanzi统计
+4. 只有README.md有变动(新建文章的场景)时, github actions触发 `vercel --prod`
+5. 新增站内搜索(从[tw93](https://github.com/tw93/weekly)同步过来)
+6. 夜间模式(从[tw93](https://github.com/tw93/weekly)同步过来)
+
+> 注意第4点, 能看到这里,说明你很大概率已经在vercel创建好了对应的项目。考虑到通常开发者都会直接用vercel-cli直接本地发布，并且vercel给的用量也够。 因此第四点并不是一个很有价值的功能
+
+
+### 项目配置
+src/config.ts 中设置站点信息
+```js
+export const SITE = {
+  "title": "测试狗",
+  "author": "testdog",
+  "description": "测试狗周刊",
+  "keywords": "测试狗,testdog,testdog.cn",
+  "icon": "http://t-qiniu.linkroutes.com/uPic/logo_vZ4QQZ.png",
+  "pic": "",
+  "homePage": "https://post.testdog.cn",
+  "blogPage": "https://thinkerchan.com",
+  "twitterId": "thinkerchan",
+  "githubId": "thinkerchan",
+  "repo": "thinkerchan/weekly",
+  "cmtURL":"https://cmt.testdog.cn",
+  "cmtJs":"https://unpkg.com/@waline/client@2.15.8/dist/waline.js",
+  "cmtCss":"https://unpkg.com/@waline/client@2.15.8/dist/waline.css",
+  "pv":true
+}
+```
+
+md文档设置toc
+```md
+---
+date: 2019/09/27
+toc: true
+---
+
+xxxxxxxx
+```
+
 ### 一、准备工作
 
 1. Fork 本仓库到自己 Github 仓库下
@@ -21,45 +65,6 @@
 3. 导入后，确定 FRAMEWORK PRESET 是 Astro（[截图](https://gw.alipayobjects.com/zos/k/ic/0BffKE.png)），一般会默认选中，没有的话请选择这个，选择后，点击 Deploy 即可，稍等片刻，等待部署
 4. 过了一会儿部署完成了，参考[截图](https://gw.alipayobjects.com/zos/k/e3/QLS7dG.png)位置，就是你的域名地址好了，点击进去就可以访问了，是不是很简单
 
-### 新增功能
-1. 评论使用[Waline](https://waline.js.org/),按教程配置即可
-2. TOC
-3. busuanzi pv统计
-4. 只有README.md有变动(新建文章的场景)时, github actions触发 `vercel --prod`
-5. 新增站内搜索(从[tw93](https://github.com/tw93/weekly)那边复制过来的😏)
-
-> 注意第4点, 能看到这里,说明你很大概率已经在vercel创建好了对应的项目。考虑到通常开发者都会直接用vercel-cli直接本地发布，并且vercel给的用量也够。 因此第四点并不是一个很有价值的功能
-
-### 项目配置
-config.json配置如下填写即可
-```json
-{
-  "title": "测试狗",
-  "author": "testdog",
-  "description": "测试狗周刊",
-  "keywords": "测试狗,testdog,testdog.cn",
-  "icon": "https://t-qiniu.linkroutes.com/uPic/XgSVmb.jpg",
-  "pic": "",
-  "homePage": "https://post.testdog.cn",
-  "blogPage": "",
-  "twitterId": "",
-  "githubId": "thinkerchan",
-  "repo": "thinkerchan/weekly",
-  "cmtURL":"https://cmt.testdog.cn", // 无则隐藏
-  "cmtJs":"https://unpkg.com/@waline/client@2.15.8/dist/waline.js",
-  "cmtCss":"https://unpkg.com/@waline/client@2.15.8/dist/waline.css",
-  "pv":true
-}
-```
-
-文档设置toc
-```
----
-toc: true
----
-
-xxxxxxxx
-```
 
 ### github actions
 > 本仓库使用github actions主要是为了自动更新readme.md，这个不是必要的。不了解Github actions可查看[文档](https://docs.github.com/zh/actions/quickstart)
@@ -73,10 +78,8 @@ xxxxxxxx
 
 4. 同理, 先获取[Vercel token](https://vercel.com/account/tokens), 按照步骤2创建一个名为`VERCEL_TOKEN`的变量
 
-### 其他
-考虑到也有人可能会同步到自己的微信公众号, 可以使用这个md转公众号文章工具 https://thinkerchan.com/md/dist/
 
 ---
 感谢
 - [tw93](https://github.com/tw93/weekly)
-- [我](https://github.com/thinkerchan/weekly)
+- [thinkerchan](https://github.com/thinkerchan/weekly)

@@ -40,7 +40,7 @@
 
 :root {
   color-scheme: light;
-  --theme-accent: hsla(var(--color-red), 1);
+  --theme-accent: #e8a15a;
   --theme-text-accent: #a67c52;
   --theme-accent-opacity: 0.15;
   --theme-divider: hsla(var(--color-gray-95), 1);
@@ -65,7 +65,6 @@
 
 [data-theme='dark'] {
   color-scheme: dark;
-  --theme-accent: #e8a15a;
   --theme-text: #e7e9ea;
 
   --theme-text-light: var(--theme-text);
