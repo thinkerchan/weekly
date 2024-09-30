@@ -119,8 +119,8 @@ a,.heti a heti-spacing {
 }
 
 .heti p {
-  margin-block-start: 1.8em;
-  margin-block-end: 1.8em;
+  margin-block-start: 1em;
+  margin-block-end: 1.4em;
   text-align: left;
 }
 
@@ -150,6 +150,7 @@ a,.heti a heti-spacing {
   margin-block-end: 0.4em;
   margin-block-start: 0.4em;
   line-height: 1.74;
+  opacity: 0.6;
 }
 
 blockquote blockquote {
