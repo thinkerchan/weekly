@@ -2,6 +2,7 @@ export const SITE = {
   "title": "测试狗",
   "author": "testdog",
   "description": "测试狗周刊",
+  "cardDesc":"🤖 为你播报一周新鲜事",
   "keywords": "测试狗,testdog,testdog.cn",
   "icon": "http://t-qiniu.linkroutes.com/uPic/logo_vZ4QQZ.png",
   "pic": "",

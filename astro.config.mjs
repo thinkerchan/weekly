@@ -6,6 +6,12 @@ import { defineConfig } from 'astro/config';
 import { parse } from 'node-html-parser';
 import { SITE } from './src/config';
 
+function fetchMdImg(file){
+  const regex = /!\[.*?\]\((.*?)\)/;
+  const match = file.match(regex);
+  const img = match ? match[1] : '';
+  return img
+}
 function defaultLayoutPlugin() {
   return function (tree, file) {
     const filePath = file.history[0];
@@ -26,12 +32,12 @@ function defaultLayoutPlugin() {
 
     // 兼容没有描述情况
     if (!desc) {
-      file.data.astro.frontmatter.desc = SITE.description;
+      file.data.astro.frontmatter.desc = SITE.cardDesc || SITE.description;
     }
 
     // 兼容没有头图的情况
     if (!pic) {
-      file.data.astro.frontmatter.pic = SITE.pic;
+      file.data.astro.frontmatter.pic =  SITE.pic || fetchMdImg(file.value);
     }
 
     //这里也可以直接在 frontmatter，赋值给 date 字段

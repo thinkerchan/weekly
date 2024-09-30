@@ -19,6 +19,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "fetch": "node .github/workflows/notion2md.js",
     "postbuild": "pagefind --site dist"
   },
   "dependencies": {
@@ -42,7 +43,10 @@
   "devDependencies": {
     "@astrojs/react": "^1.1.4",
     "@astrojs/tailwind": "^2.0.1",
+    "@notionhq/client": "^2.2.15",
     "@tailwindcss/typography": "^0.5.7",
-    "@types/lozad": "^1.16.1"
+    "@types/lozad": "^1.16.1",
+    "dotenv": "^16.4.5",
+    "moment": "^2.30.1"
   }
 }
