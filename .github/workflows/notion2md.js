@@ -1,9 +1,8 @@
-// commonjs mode, you can also use `import` for module mode
-const { Client } = require('@notionhq/client');
-const moment = require('moment');
-const fs = require('fs');
-const path = require('path');
-const dotEnv = require('dotenv')
+import { Client } from '@notionhq/client';
+import moment from 'moment';
+import fs from 'fs';
+import path from 'path';
+import dotEnv from 'dotenv'
 
 if (!process.env.GITHUB_ACTIONS) {
   dotEnv.config();
