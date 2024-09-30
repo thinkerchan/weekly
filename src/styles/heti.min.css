@@ -6,14 +6,12 @@
 html {
   font-size: 16px;
   font-display: swap;
-  color: #262626;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
   padding: 0;
   margin: 0;
-  color: #262626;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,9 +35,7 @@ iframe {
   max-width: 900px;
 }
 
-a,
-.heti a heti-spacing {
-  color: #1d9bf0;
+a,.heti a heti-spacing {
   cursor: pointer;
 }
 
@@ -51,7 +47,6 @@ a,
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
-  color: #262626;
 }
 
 .heti::before,
@@ -147,7 +142,6 @@ a,
   padding-inline-start: 16px;
   padding-inline-end: 16px;
   border-radius: 4px;
-  color: #777;
   border-left: 4px solid #f1f3f4;
   line-height: 1;
 }
@@ -344,7 +338,6 @@ blockquote blockquote {
   .heti p > code,
   .heti li > code {
     background-color: #343941;
-    color: #e8e8eb;
   }
 }
 
@@ -381,7 +374,6 @@ blockquote blockquote {
 
 .heti a {
   text-decoration: none;
-  color: #1d9bf0;
 }
 
 .heti a:hover {
@@ -452,7 +444,6 @@ blockquote blockquote {
   margin-inline-start: 1px;
   margin-inline-end: 1px;
   background-color: rgba(255, 247, 0, 0.88);
-  color: inherit;
 }
 
 @media (prefers-color-scheme: dark) {
