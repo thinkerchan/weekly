@@ -1,14 +1,13 @@
 # 开发教程
 
-> 此项目是基于原作者的 [tw93](https://github.com/tw93/weekly) 项目修改的
+> 此项目是基于原作者的 [tw93](https://github.com/tw93/weekly) 项目修改
 ### 新增功能
 1. 评论使用[Waline](https://waline.js.org/),按教程配置即可
 2. 文章TOC
 3. busuanzi统计
-4. 只有README.md有变动(新建文章的场景)时, github actions触发 `vercel --prod`
-5. 新增站内搜索(从[tw93](https://github.com/tw93/weekly)同步过来)
-6. 夜间模式(从[tw93](https://github.com/tw93/weekly)同步过来)
-7. 修改github action工作流
+4. 新增站内搜索(从[tw93](https://github.com/tw93/weekly)同步过来)
+5. 夜间模式(从[tw93](https://github.com/tw93/weekly)同步过来)
+6. 使用 [notion2md](https://github.com/thinkerchan/notion2md) 工作流，只要把项目部署到vercel即可自动更新
 
 
 ### 项目配置
@@ -66,16 +65,7 @@ xxxxxxxx
 
 
 ### github actions
-> 本仓库使用github actions主要是为了自动更新readme.md，这个不是必要的。不了解Github actions可查看[文档](https://docs.github.com/zh/actions/quickstart)
-
-直接按下操作即可:
-1. 先在 https://github.com/settings/tokens/new 创建一个秘钥, 在`Select scopes`中把 `repo`和`workflow`勾上, 保存. 然后复制生成的那个明文秘钥，格式类似: ghp_xxxxxxxxxxx , 注意不要泄露。
-
-2. 回到 https://github.com/你的仓库/settings/secrets/actions 中, 点击`new repository secret` 创建一个名为`GH_TOKEN`的变量, 值为步骤1中的秘钥
-
-3. 回到 https://github.com/你的仓库/settings/actions, 找到 `Workflow permissions`, 选中 `读和写权限` 保存即可
-
-4. 同理, 先获取[Vercel token](https://vercel.com/account/tokens), 按照步骤2创建一个名为`VERCEL_TOKEN`的变量
+由于本项目使用了[notion2md](https://github.com/thinkerchan/notion2md) 工作流，数据都是从notion数据库定期自动同步过来的。因此要用到github actions。 可以看到[notion2md](https://github.com/thinkerchan/notion2md)的工作流介绍自行设置好`NOTION_TOKEN`和`NOTION_DATABASE_ID`两个变量
 
 
 ---
