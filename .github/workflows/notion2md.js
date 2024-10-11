@@ -61,6 +61,11 @@ async function main() {
         ],
       }
     });
+    
+    if(!response.results.length){
+      console.log('no data')
+      return
+    }
 
     let mid = (`${startDay}_${today}`).replace(/-/g,'')
     let mdHead = `---\ndate: ${today.replace(/-/g,'/')}\ntoc: true\n---\n\n`
