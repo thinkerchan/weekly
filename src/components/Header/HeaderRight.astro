@@ -8,6 +8,6 @@ import Search from './Search.astro';
   <Search />
   {SITE.blogPage && (<HeaderLink href={SITE.blogPage} target="_blank">Blog</HeaderLink>)}
   {SITE.twitterId && (<HeaderLink href={`https://twitter.com/${SITE.twitterId}`} target="_blank">Twitter</HeaderLink>)}
-  {SITE.githubId && (<HeaderLink href={`https://github.com/${SITE.githubId}`} target="_blank" class="lg:inline-block hidden">GitHub</HeaderLink>)}
+  {SITE.githubId && (<HeaderLink href={`https://github.com/${SITE.repo}`} target="_blank" class="lg:inline-block hidden">GitHub</HeaderLink>)}
   <HeaderLink href="/rss.xml" target="_blank" class="lg:inline-block hidden">RSS</HeaderLink>
 </div>

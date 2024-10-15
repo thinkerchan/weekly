@@ -1,6 +1,7 @@
 # 开发教程
 
 > 此项目是基于原作者的 [tw93](https://github.com/tw93/weekly) 项目修改
+
 ### 新增功能
 1. 评论使用[Waline](https://waline.js.org/),按教程配置即可
 2. 文章TOC
@@ -58,7 +59,7 @@ xxxxxxxx
 
 ### 部署说明
 
-1. 由于 astro 最终打包出来是静态的文件，按理所有支持资源部署的平台都支持的，比如说 Github Pages、Vercel、Netlify 都可以的，此次重点推荐用 Vercel 部署，很简单高效，其他的平台可以参考 [astro](https://docs.astro.build/en/guides/deploy/) 文档，以下说明的是 Vercel 的部署教程
+1. 推荐用 Vercel 部署
 2. 首先确保 Fork 的代码已经传到 Github 中了, 然后进入 [Vercel](https://vercel.com/new) 选择 `Continue with GitHub`，将对应的仓库 import 进去
 3. 导入后，确定 FRAMEWORK PRESET 是 Astro（[截图](https://gw.alipayobjects.com/zos/k/ic/0BffKE.png)），一般会默认选中，没有的话请选择这个，选择后，点击 Deploy 即可，稍等片刻，等待部署
 4. 过了一会儿部署完成了，参考[截图](https://gw.alipayobjects.com/zos/k/e3/QLS7dG.png)位置，就是你的域名地址好了，点击进去就可以访问了，是不是很简单
