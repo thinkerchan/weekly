@@ -2,7 +2,7 @@
 import '../styles/theme.css';
 import '../styles/index.css';
 import { SITE } from '@/config';
-const {icon} =SITE;
+const {icon,cmtCss,favicon} =SITE;
 ---
 
 <!-- Global Metadata -->
@@ -10,7 +10,7 @@ const {icon} =SITE;
 <meta name="viewport" content="width=device-width" />
 
 <link rel="shortcut icon" href={icon} />
-<link rel="icon" type="image/svg+xml" href={icon} />
+<link rel="icon" type="image/svg+xml" href={favicon} />
 <link rel="alternate icon" type="image/x-icon" href={icon}/>
 <link rel="sitemap" href="/sitemap.xml" />
-<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
+<link rel="stylesheet" href={cmtCss} />

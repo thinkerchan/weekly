@@ -419,3 +419,10 @@ h2.heading {
 .card-desc{
   color: var(--theme-text-light-gray);
 }
+
+#Jslot p a{
+  padding-block-end: 1px;
+  border-block-end: 1px solid currentColor;
+  text-decoration: none;
+  color: var(--theme-accent);
+}

@@ -5,6 +5,7 @@ export const SITE = {
   "cardDesc":"🤖 为你播报一周新鲜事",
   "keywords": "测试狗,testdog,testdog.cn",
   "icon": "http://t-qiniu.linkroutes.com/uPic/logo_vZ4QQZ.png",
+  "favicon": "https://github.githubassets.com/favicons/favicon.svg",
   "pic": "",
   "homePage": "https://post.testdog.cn",
   "blogPage": "https://thinkerchan.com",
