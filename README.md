@@ -68,6 +68,12 @@ xxxxxxxx
 ### github actions
 由于本项目使用了[notion2md](https://github.com/thinkerchan/notion2md) 工作流，数据都是从notion数据库定期自动同步过来的。因此要用到github actions。 可以看到[notion2md](https://github.com/thinkerchan/notion2md)的工作流介绍自行设置好`NOTION_TOKEN`和`NOTION_DATABASE_ID`两个变量
 
+### 测试notion连接
+如果你按上面步骤部署好了，可以测试notion连接是否正常。
+```bash
+npm run fetch // 可观察到posts文件夹下有新的md文件生成
+```
+
 
 ---
 感谢
