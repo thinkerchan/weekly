@@ -15,12 +15,11 @@ const { pic, desc, date } = post.frontmatter;
   class="art-card pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96"
 >
   <img
-    data-placeholder-background="linear-gradient(to bottom, #ece9e6, #f1f1f1)"
+
     data-src={`${pic? (pic.indexOf('t-qiniu') > -1 ?  pic+'?imageView2/2/w/640' : pic ) :'https://dummyimage.com/600x400/fff/000000.jpg&text=Hello'}`}
     data-alt={title}
     alt={title}
-    class="lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
-    style="object-fit: cover;"
+    class="img lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
   />
   <div
     class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3"
