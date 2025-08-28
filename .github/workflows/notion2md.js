@@ -127,7 +127,7 @@ async function main() {
     if (existingFile) {
       filePath = path.join(CONFIG.dir, existingFile);
     } else {
-      const fileCount = existingFiles.length - 1;
+      const fileCount = existingFiles.length + 1;
       const fileName = `${(fileCount < 10 ? '0' + fileCount : fileCount) + '-' + (CONFIG.filename || today)}-${mid}.md`;
       filePath = path.join(CONFIG.dir, fileName);
     }
