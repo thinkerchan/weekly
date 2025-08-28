@@ -19,8 +19,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch": "node .github/workflows/notion2md.js",
-    "fetch:all": "node .github/workflows/notion2md.js -a",
+    "fetch": "node .github/workflows/notion2md.js -d",
     "postbuild": "pagefind --site dist"
   },
   "dependencies": {

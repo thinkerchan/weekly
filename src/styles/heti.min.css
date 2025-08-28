@@ -5,7 +5,7 @@
 
 html {
   font-size: 16px;
-  font-display: swap;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 

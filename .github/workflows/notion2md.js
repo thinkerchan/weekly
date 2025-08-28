@@ -4,9 +4,9 @@ import fs from 'fs';
 import path from 'path';
 import dotEnv from 'dotenv'
 
-// 判断是否有参数 -a
 const args = process.argv.slice(2);
-const isAll = args.includes('-a');
+const dateIndex = args.indexOf('-d');
+const dateStr = dateIndex !== -1 && dateIndex + 1 < args.length ? args[dateIndex + 1] : null;
 
 if (!process.env.GITHUB_ACTIONS) {
   dotEnv.config();
@@ -21,7 +21,7 @@ const CONFIG ={
   filename:'本周见闻'
 }
 
-const curTime = moment(Date.now());
+const curTime = dateStr ? moment(dateStr) : moment(Date.now());
 const today = curTime.format('YYYY-MM-DD');
 const startDay = moment(curTime).subtract(CONFIG.days, 'days').format('YYYY-MM-DD')
 
@@ -127,7 +127,7 @@ async function main() {
     if (existingFile) {
       filePath = path.join(CONFIG.dir, existingFile);
     } else {
-      const fileCount = existingFiles.length;
+      const fileCount = existingFiles.length - 1;
       const fileName = `${(fileCount < 10 ? '0' + fileCount : fileCount) + '-' + (CONFIG.filename || today)}-${mid}.md`;
       filePath = path.join(CONFIG.dir, fileName);
     }
