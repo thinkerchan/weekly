@@ -387,8 +387,9 @@ h2.heading {
 }
 
 .g-toc li{
-  font-size: .96em;
+  font-size: .9em;
   padding-bottom: .2rem;
+  font-weight: 700;
 }
 .g-toc .toc-sub-list{
   padding-top: .2rem;
@@ -398,7 +399,7 @@ h2.heading {
 }
 
 .g-toc li .on{
-  font-weight: bold;
+  color: var(--theme-accent);
 }
 
 .g-toc li a{
