@@ -9,6 +9,7 @@
 4. 新增站内搜索(从[tw93](https://github.com/tw93/weekly)同步过来)
 5. 夜间模式(从[tw93](https://github.com/tw93/weekly)同步过来)
 6. 使用 [notion2md](https://github.com/thinkerchan/notion2md) 工作流，只要把项目部署到vercel即可自动更新
+7. 新增命令： npm run fetch 20250501  场景：重新拉取该日期前一周的内容
 
 
 ### 项目配置
