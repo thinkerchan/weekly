@@ -157,8 +157,10 @@ if (allPosts.length) {
         .logo {
           display: block;
           color: #fff;
-          margin-top: -0.1em;
-          margin-right: 0.2em;
+          margin-bottom: 0;
+          display: flex;
+          align-items: center;
+          margin-right:.2em;
         }
 
         .logo:active {
@@ -214,14 +216,6 @@ if (allPosts.length) {
           <div id="Jslot">
             <slot/>
           </div>
-          <!-- <div class="flex align-middle justify-center mt-4">
-            <a
-              class="inline-block h-10 items-center rounded bg-[#262626] px-5 py-3 text-sm font-medium text-white pay-button"
-              href=""
-              target="_blank"
-              rel="noreferrer"></a
-            >
-          </div> -->
           <hr />
           <div
             class="flex justify-between md:flex-row flex-col mt-2 post-footer"

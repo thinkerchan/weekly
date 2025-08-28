@@ -12,14 +12,14 @@ const { pic, desc, date } = post.frontmatter;
 
 <a
   href={post.url}
-  class="art-card pb-3 md:mt-5 mt-4 md:mr-5 flex flex-col justify-center rounded-b-md shadow-md overflow-hidden mx-auto md:w-80 w-96"
+  class="art-card"
 >
   <img
 
     data-src={`${pic? (pic.indexOf('t-qiniu') > -1 ?  pic+'?imageView2/2/w/640' : pic ) :'https://dummyimage.com/600x400/fff/000000.jpg&text=Hello'}`}
     data-alt={title}
     alt={title}
-    class="img lozad block md:w-80 md:h-48 w-96 h-52 rounded-t-md"
+    class="art-card-img img lozad block md:w-80 md:h-48 w-96 h-52"
   />
   <div
     class="w-full flex justify-between items-center leading-tight pt-4 pl-3 pr-3"

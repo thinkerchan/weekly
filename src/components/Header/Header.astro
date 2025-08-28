@@ -6,7 +6,7 @@ import HeaderRight from './HeaderRight.astro';
 
 <header>
   <nav
-    class="nav-wrapper md:-ml-3 xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 ml-4"
+    class="nav-wrapper  xl:max-w-7xl md:w-full lg:max-w-5xl md:max-w-2xl w-96 "
     title={SITE.title}
   >
     <div class="logo flex md:ml-0 ml-3">
@@ -23,7 +23,7 @@ import HeaderRight from './HeaderRight.astro';
 
 <style>
   header {
-    height: var(--theme-navbar-height);
+    /* height: var(--theme-navbar-height); */
     width: 100%;
     background-color: var(--theme-navbar-bg);
     display: flex;
@@ -33,45 +33,13 @@ import HeaderRight from './HeaderRight.astro';
     top: 0;
   }
 
-  .logo {
-    display: flex;
-    font-size: 2rem;
-    flex-shrink: 0;
-    font-weight: 600;
-    line-height: 1;
-    color: hsla(var(--color-base-white), 100%, 1);
-    gap: 0.25em;
-  }
-
-  .logo a {
-    padding: 0.5em 0.25em;
-    margin: -0.5em -0.25em;
-    text-decoration: none;
-    font-weight: bolder;
-    display: block;
-  }
-
-  .logo .logo-image {
-    margin-top: -0.6em;
-  }
-
-  .logo a {
-    transition: color 100ms ease-out;
-    color: var(--theme-text);
-  }
-
-
-  .logo h1 {
-    font: inherit;
-    margin: 0;
-  }
 
   .nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 1em;
-    margin: 10px 0 5px;
+    @apply pt-6;
   }
 
   @media (max-width: 50em) {

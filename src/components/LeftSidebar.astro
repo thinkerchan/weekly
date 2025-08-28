@@ -114,18 +114,18 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
     color: inherit;
     text-decoration: none;
     display: block;
-    font-weight: 400;
+    /* font-weight: 400; */
   }
   .nav-link a:hover,
   .nav-link a:focus {
     color: var(--theme-accent);
-    font-weight: bold;
+    /* font-weight: bold; */
 
   }
 
   .nav-link a[aria-current='page'] {
     color: var(--theme-accent);
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 
   @media (min-width: 50em) {
@@ -134,43 +134,5 @@ const sidebarSections = allPosts.reduce((col, item, i) => {
       margin-top: 0.7em;
     }
   }
-  .logo {
-    display: flex;
-    overflow: hidden;
-    font-size: 2rem;
-    font-weight: bolder;
-    flex-shrink: 0;
-    font-weight: 600;
-    line-height: 1;
-    color: hsla(var(--color-base-white), 100%, 1);
-    gap: 0.25em;
-    padding: 0.25em 0;
-  }
 
-  .logo a {
-    padding: 0.5em 0.25em;
-    margin: -0.5em -0.25em;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-  }
-
-  .logo .logo-image {
-    margin-top: -0.6em;
-  }
-
-  .logo a {
-    transition: color 100ms ease-out;
-    color: var(--theme-text);
-  }
-
-  .logo a:hover,
-  .logo a:focus {
-    color: var(--theme-text-accent);
-  }
-
-  .logo h1 {
-    font: inherit;
-    margin: 0;
-  }
 </style>

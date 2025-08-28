@@ -4,6 +4,10 @@ import fs from 'fs';
 import path from 'path';
 import dotEnv from 'dotenv'
 
+// 判断是否有参数 -a
+const args = process.argv.slice(2);
+const isAll = args.includes('-a');
+
 if (!process.env.GITHUB_ACTIONS) {
   dotEnv.config();
 }
