@@ -37,7 +37,7 @@ function defaultLayoutPlugin() {
 
     // 兼容没有头图的情况
     if (!pic) {
-      file.data.astro.frontmatter.pic =  SITE.pic || fetchMdImg(file.value);
+      file.data.astro.frontmatter.pic =  fetchMdImg(file.value) || SITE.pic ;
     }
 
     //这里也可以直接在 frontmatter，赋值给 date 字段

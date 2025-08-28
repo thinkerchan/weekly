@@ -6,7 +6,7 @@ export const SITE = {
   "keywords": "测试狗,testdog,testdog.cn",
   "icon": "https://telegram-file.vercel.app/api/file/BQACAgUAAxkDAAIBMGiwJkrWBgue5fa1ipcHmNreG9cGAAJCGQACDCGBVR8ccraBfN8zNgQ.png",
   "favicon": "https://github.githubassets.com/favicons/favicon.svg",
-  "pic": "https://www.ruanyifeng.com/images_pub/pub_88.jpg",
+  "pic": "", // 默认头图 也可不填
   "homePage": "https://post.testdog.cn",
   "blogPage": "https://thinkerchan.com",
   "twitterId": "thinkerchan",
